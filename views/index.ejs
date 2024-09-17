@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Home Page</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <h1>Welcome to the Blog</h1>
+
+    <!-- form to create a new post -->
+    <section class="post-content">
+      <h2>Create a Post</h2>
+      <form action="/post" method="POST">
+        <input type="text" name="title" placeholder="Post Title" required />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <textarea name="content" placeholder="Post Content" required></textarea>
+        <button type="submit">Publish</button>
+      </form>
+    </section>
+
+    <!-- Displaying all posts -->
+    <section>
+      <h2>Blog Articles</h2>
+      <ul>
+        <% for (let post of blogPosts) { %>
+        <li>
+          <h3><%= post.title %> by <%= post.author %></h3>
+          <p><strong>Date:</strong> <%= post.date %></p>
+          <p><%= post.text %></p>
+          <form action="/delete/<%= post.id %>" method="POST"></form>
+            <button type="submit">Delete</button>
+          </form>
+          <a href="/edit-post/<%= post.id %>">Edit</a>
+        </li>
+        <% } %>
+      </ul>
+    </section>
+  </body>
+</html>

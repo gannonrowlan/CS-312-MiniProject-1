@@ -1,0 +1,111 @@
+/* Body styling */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #f9fafb;
+  color: #2d3748;
+  padding: 40px;
+  line-height: 1.8;
+}
+
+.post-content {
+  text-align: center;
+}
+/* Headings */
+h1 {
+  color: #1a202c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+
+/* Form styling */
+form {
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #edf2f7;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  background-color: #fff;
+}
+
+textarea {
+  height: 150px;
+}
+
+/* Button styling */
+button {
+  background-color: #38b2ac;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #319795;
+}
+
+/* Styling for the list of posts */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+li {
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #f7fafc;
+  border-left: 5px solid #3182ce;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+strong {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Links */
+a {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Inline form for delete button */
+form[method="POST"] {
+  display: inline-block;
+}
